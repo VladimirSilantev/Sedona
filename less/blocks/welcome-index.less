@@ -1,0 +1,85 @@
+.welcome-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 320px;
+  height: 392px;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.welcome-index::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 28px;
+  bottom: -1px;
+  left: 0;
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .welcome-index {
+    width: @tablet-width;
+    height: 519px;
+    background-color: #e2eff7;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 1338px auto;
+    }
+  }
+
+  .welcome-index::before {
+    content: "";
+    position: absolute;
+    width: 768px;
+    height: 57px;
+    bottom: 0;
+    left: 0;
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
+  }
+
+  .welcome-index__text {
+    margin-top: -15px;
+    width: 459px;
+    height: 350px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .welcome-index {
+    width: @desktop-width;
+    height: 519px;
+    background-color: #e2eff7;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 1338px auto;
+    }
+  }
+
+  .welcome-index::before {
+    content: "";
+    position: absolute;
+    width: 1200px;
+    height: 57px;
+    bottom: 0;
+    left: 0;
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
+  }
+
+  .welcome-index__text {
+    width: 459px;
+    height: 431px;
+  }
+}

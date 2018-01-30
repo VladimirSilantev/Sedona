@@ -1,0 +1,89 @@
+.welcome-internal-page {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 320px;
+  height: 158px;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: 50% 95%;
+  background-repeat: no-repeat;
+}
+
+.welcome-internal-page__text {
+  margin-top: 52px;
+  width: 230px;
+  height: 42px;
+}
+
+.welcome-internal-page::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 28px;
+  bottom: -2px;
+  left: 0;
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .welcome-internal-page {
+    width: 768px;
+    height: 290px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: 50% 95%;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 1338px auto;
+    }
+  }
+
+  .welcome-internal-page::before {
+    content: "";
+    position: absolute;
+    width: 768px;
+    height: 57px;
+    bottom: 0;
+    left: 0;
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
+  }
+
+  .welcome-internal-page__text {
+    margin-top: 95px;
+    width: 458px;
+    height: 78px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .welcome-internal-page {
+    width: @desktop-width;
+    height: 300px;
+    background-color: #e2eff7;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: 50% 99%;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 1338px auto;
+    }
+  }
+
+  .welcome-internal-page::before {
+    content: "";
+    position: absolute;
+    width: 1200px;
+    height: 57px;
+    bottom: 0;
+    left: 0;
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
+  }
+
+  .welcome-internal-page__text {
+    margin-top: 101px;
+    width: 463px;
+  }
+}

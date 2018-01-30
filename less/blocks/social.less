@@ -1,0 +1,57 @@
+.social {
+  margin-bottom: 0;
+  display: flex;
+  margin-top: 37px;
+  margin-left: 111px;
+  margin-right: 119px;
+  padding: 0;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 48px;
+  margin-right: 6px;
+  background-color: @base-color;
+  font-size: 0;
+}
+
+.social__link svg {
+  fill: @text-color;
+}
+
+.social__link:hover {
+  background-color: @base-color-hover;
+}
+
+.social__link:active {
+  background-color: @base-color-active;
+}
+
+.social__link:active svg {
+  fill: @text-color-active;
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+}
+
+.social__link--youtube {
+  margin-right: 0;
+}
+
+@media (min-width: @desktop-width) {
+  .social {
+    margin-left: 256px;
+    margin-right: 351px;
+  }
+}
+

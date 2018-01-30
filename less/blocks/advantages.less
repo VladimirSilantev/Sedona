@@ -1,0 +1,267 @@
+.advantages__item--main {
+  color: @text-color;
+}
+
+.advantages__wrapper {
+  .background();
+  padding: 39px 20px;
+}
+
+.advantages__wrapper--triangle {
+  padding-bottom: 40px;
+  padding-top: 77px;
+  position: relative;
+}
+
+.advantages__wrapper--triangle::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 37px;
+  top: 0;
+  left: 0;
+  background-image: url("../img/bg-triangle.svg");
+  background-repeat: no-repeat;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 13px;
+  .title();
+  text-align: center;
+}
+
+.advantages__number {
+  margin: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.advantages__number--main::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 116px;
+  width: 8px;
+  height: 1px;
+  background-color: @text-color;
+}
+
+.advantages__number--main::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 155px;
+  width: 8px;
+  height: 1px;
+  background-color: @text-color;
+}
+
+.advantages__number--other::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 106px;
+  width: 8px;
+  height: 1px;
+  background-color: @black-color;
+}
+
+.advantages__number--other::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 145px;
+  width: 8px;
+  height: 1px;
+  background-color: @black-color;
+}
+
+.advantages__description {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.advantages__item--other {
+  position: relative;
+  background-color: #eeeeee;
+  padding: 25px 32px 30px;
+}
+
+.advantages__item--other br {
+  display: none;
+}
+
+.advantages__item--other:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 280px;
+  height: 1px;
+  background-color: #d6d6d6;
+}
+
+.advantages__item--other:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 169px;
+  left: 20px;
+  width: 280px;
+  height: 1px;
+  background-color: #d6d6d6;
+  z-index: 2;
+}
+
+.advantages__picture-town,
+.advantages__picture-bridge {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item--main:nth-child(3) {
+    flex-direction: row-reverse;
+  }
+
+  .advantages__wrapper {
+    min-width: 256px;
+    max-width: 256px;
+    height: 256px;
+  }
+
+  .advantages__wrapper--triangle {
+    padding-top: 43px;
+    line-height: 1.3;
+  }
+
+  .advantages__title {
+    margin-bottom: 10px;
+    font-size: 21px;
+  }
+
+  .advantages__title--tourists {
+    width: 130px;
+  }
+
+  .advantages__description {
+    max-width: 170px;
+    margin-top: 6px;
+    line-height: 1.44;
+  }
+
+  .advantages__picture-town {
+    width: 512px;
+    height: 256px;
+    background-color: #a7b4a2;
+  }
+
+  .advantages__picture-bridge {
+    width: 512px;
+    height: 256px;
+    background-color: #dd8869;
+  }
+
+  .advantages__wrapper-other {
+    display: flex;
+  }
+
+  .advantages__item--other {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 256px;
+    padding: 45px 45px 50px;
+    border-style: none;
+  }
+
+  .advantages__item--other:nth-child(2)::after,
+  .advantages__item--other:nth-child(2)::before,
+  .advantages__wrapper--triangle::before {
+    display: none;
+  }
+
+  .advantages__item--other .advantages__title {
+    line-height: 1.3;
+  }
+
+  .advantages__item--other br {
+    display: inline;
+  }
+
+  .advantages__number--main::before {
+    left: 83px;
+  }
+
+  .advantages__number--main::after {
+    left: 125px;
+  }
+
+  .advantages__number--other::before {
+    left: -16px;
+  }
+
+  .advantages__number--other::after {
+    left: 28px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 400px;
+    padding-top: 50px;
+  }
+
+  .advantages__item--other {
+    padding-bottom: 70px;
+    width: 400px;
+    padding-top: 43px;
+  }
+
+  .advantages__title {
+    width: 158px;
+  }
+
+  .advantages__description {
+    max-width: 280px;
+  }
+
+  .advantages__picture-town {
+    width: 800px;
+    height: 256px;
+  }
+
+  .advantages__picture-bridge {
+    width: 800px;
+    height: 256px;
+  }
+
+  .advantages__number--main::before {
+    left: -13px;
+  }
+
+  .advantages__number--main::after {
+    left: 27px;
+  }
+
+  .advantages__number--other::before {
+    left: -16px;
+  }
+
+  .advantages__number--other::after {
+    left: 28px;
+  }
+
+  .advantages__item--other .advantages__description {
+    max-width: 300px;
+  }
+}

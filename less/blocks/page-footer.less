@@ -1,0 +1,130 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: @base-width;
+  text-transform: uppercase;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.page-footer__picture-map {
+  position: relative;
+}
+
+.page-footer__picture-map::before {
+  content: "";
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: 161px;
+  left: 146px;
+  background-image: url("../img/icon-map-marker.svg");
+}
+
+.page-footer__wrapper {
+  margin-top: 33px;
+}
+
+.page-footer__social-title {
+  font-size: 21px;
+}
+
+.page-footer__copyright {
+  display: flex;
+}
+
+.page-footer__copyright-text {
+  padding-top: 48px;
+  padding-left: 15px;
+  padding-bottom: 30px;
+  margin-left: 112px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.page-footer__copyright-link {
+  font-size: 0;
+  position: relative;
+}
+
+.page-footer__copyright-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 38px;
+  left: 13px;
+  width: 30px;
+  height: 38px;
+  background-image: url("../img/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
+}
+
+.page-footer__copyright-link::after:hover svg {
+  fill: @base-color-active;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    width: @tablet-width;
+    margin: 0 auto;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin-bottom: 36px;
+    padding: 0 60px;
+    width: 100%;
+  }
+
+  .page-footer__copyright-text {
+    padding: 0;
+    margin-left: 0;
+  }
+
+  .page-footer__copyright-link::after {
+    top: -5px;
+    left: 10px;
+  }
+
+  .page-footer__map {
+    width: @tablet-width;
+    height: 350px;
+    background-color: #cbe0a4;
+  }
+
+  .page-footer__picture-map::before {
+    top: 164px;
+    left: 370px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: @desktop-width;
+  }
+
+  .page-footer__wrapper {
+    width: @desktop-width;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page-footer__map {
+    width: @desktop-width;
+  }
+
+  .page-footer__picture-map::before {
+    top: 162px;
+    left: 586px;
+  }
+
+  .page-footer__social-title {
+    margin-left: 134px;
+  }
+}

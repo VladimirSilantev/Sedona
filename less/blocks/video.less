@@ -1,0 +1,150 @@
+.video__preview {
+  display: block;
+}
+
+.video__volume-scale {
+  position: relative;
+  margin-top: -47px;
+  margin-left: 20px;
+  width: 280px;
+  height: 47px;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video__volume-scale::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  width: 235px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.video__volume-scale::after {
+  content: "";
+  position: absolute;
+  top: 18.5px;
+  left: 58px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.video__controls {
+  margin-left: 20px;
+  padding: 20px;
+  width: 280px;
+  height: 66px;
+  background-color: @input-color;
+}
+
+.video__replay {
+  margin-right: 133px;
+}
+
+.video__subtitles {
+  margin-right: 31px;
+}
+
+@media (min-width: @tablet-width) {
+  .video {
+    width: 648px;
+    height: 500px;
+  }
+
+  .video__preview {
+    width: 100%;
+  }
+
+  .video__volume-scale {
+    position: relative;
+    margin: -92px 0 0;
+    width: 648px;
+    height: 92px;
+    z-index: 2;
+  }
+
+  .video__volume-scale::before {
+    width: 389px;
+    top: 45px;
+    left: 93px;
+  }
+
+  .video__volume-scale::after {
+    top: 41px;
+    left: 206px;
+  }
+
+  .video__controls {
+    position: relative;
+    padding: 0;
+    margin-top: -55px;
+    margin-left: 0;
+    background: none;
+    width: 648px;
+    z-index: 3;
+  }
+
+  .video__replay path,
+  .video__subtitles path,
+  .video__fullscreen polygon {
+    fill: #ffffff;
+  }
+
+  .video__replay {
+    margin-left: 35px;
+    margin-right: 473px;
+  }
+
+  .video__fullscreen {
+    right: 38px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video {
+    width: 800px;
+    height: 500px;
+  }
+
+  .video__preview {
+    width: 100%;
+  }
+
+  .video__volume-scale {
+    position: relative;
+    margin: -92px 0 0;
+    width: 800px;
+    height: 92px;
+    z-index: 2;
+  }
+
+  .video__volume-scale::before {
+    width: 540px;
+    top: 45px;
+  }
+
+  .video__volume-scale::after {
+    top: 41px;
+  }
+
+  .video__controls {
+    position: relative;
+    width: 800px;
+    z-index: 3;
+  }
+
+  .video__replay {
+    margin-left: 35px;
+    margin-right: 618px;
+  }
+
+  .video__subtitles {
+    margin-right: 28px;
+  }
+}

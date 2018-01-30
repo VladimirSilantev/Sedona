@@ -1,0 +1,54 @@
+.background() {
+  background-color: @base-color;
+}
+
+.title() {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.review-text() {
+  padding: 20px;
+  border-style: none;
+}
+
+.review-value() {
+  border-style: none;
+}
+
+.review-input() {
+  padding-left: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-style: none;
+  background-color: @input-color;
+}
+
+.button() {
+  width: 280px;
+  height: 58px;
+  font-size: 21px;
+  font-weight: bold;
+  color: @text-color;
+  text-align: center;
+  vertical-align: middle;
+  background-color: @base-color;
+}
+
+.placeholder(@rules) {
+  &::-webkit-input-placeholder {
+    @rules();
+  }
+
+  &:-moz-placeholder {
+    @rules();
+  }
+
+  &::-moz-placeholder {
+    @rules();
+  }
+
+  &:-ms-input-placeholder {
+    @rules();
+  }
+}
